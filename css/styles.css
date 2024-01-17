@@ -1,0 +1,88 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.welcome-screen {
+    height: 100vh; /* Full viewport height */
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); /* Glassy background gradient */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000; /* Set a high z-index to ensure it stays on top */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+
+.menu li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #333;
+    font-weight: 600; /* Adjust font weight */
+    text-transform: uppercase; /* Convert text to uppercase */
+    display: flex;
+    align-items: center;
+}
+
+.menu li img {
+    width: 24px; /* Adjust the icon width */
+    height: 24px; /* Adjust the icon height */
+    margin-right: 5px; /* Add some space between the icon and text */
+}
+
+.menu li:hover {
+    background-color: #555; /* Hover color for menu items */
+}
+
+.section {
+    padding: 40px;
+    background-color: #fff; /* Section background color */
+    color: #333; /* Section text color */
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Section box shadow */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+
+.menu.dark-mode {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); /* Dark mode glassy background gradient */
+}
+
+.menu li.dark-mode:hover {
+    background-color: #777; /* Hover color for menu items in dark mode */
+}
+
+.section.dark-mode {
+    background-color: #444; /* Dark mode section background color */
+    color: #fff; /* Dark mode section text color */
+}
