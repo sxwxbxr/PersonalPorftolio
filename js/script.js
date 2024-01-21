@@ -5,7 +5,7 @@ function scrollToSection(sectionId) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const welcomeScreen = document.querySelector(".welcome-screen");
+    const welcomeScreen = document.querySelector(".container");
 
     welcomeScreen.addEventListener("mousemove", function (e) {
         const { clientX: x, clientY: y } = e;
@@ -15,3 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomeScreen.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(255, 255, 255, 0.2), transparent)`;
     });
 });
+
+function goToLogin() {
+    window.location.href = "login.html";
+}

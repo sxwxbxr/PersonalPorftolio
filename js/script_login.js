@@ -1,8 +1,21 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const welcomeScreen = document.querySelector(".container");
+
+    welcomeScreen.addEventListener("mousemove", function (e) {
+        const { clientX: x, clientY: y } = e;
+        const percentX = (x / window.innerWidth) * 100;
+        const percentY = (y / window.innerHeight) * 100;
+
+        welcomeScreen.style.background = `radial-gradient(circle at ${percentX}% ${percentY}%, rgba(255, 255, 255, 0.2), transparent)`;
+    });
+});
+
+
 
 // Functions for Login Page
-const x = document.getElementById('login');
-const y = document.getElementById('register');
-const z = document.getElementById('btn');
+let x = document.getElementById('login');
+let y = document.getElementById('register');
+let z = document.getElementById('btn');
 
 function login(){
     x.style.left = "27px";
@@ -49,4 +62,8 @@ function myRegPassword(){
         c.style.opacity = "0";
     }
 
+}
+
+function goToHome() {
+    window.location.href = "index.html";
 }
